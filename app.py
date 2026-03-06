@@ -25,7 +25,7 @@ if st.button("動画を取得"):
                 'geo_bypass': True,          
                 'nocheckcertificate': True, 
                 
-                せる
+                
                 'extractor_args': {
                     'youtube': {
                         'player_client': ['android', 'tv', 'web_creator', 'web']
