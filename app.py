@@ -23,6 +23,18 @@ if st.button("動画を取得"):
                 'outtmpl': temp_filename,
                 'quiet': True,
                 'noplaylist': True
+            'extractor_args': {
+                    'youtube': {
+                        # WEBブラウザではなく、AndroidやTVアプリからのアクセスとして処理させる
+                        'player_client': ['android', 'web']
+                    }
+                },
+                'http_headers': {
+                    # 普通のパソコンのブラウザからのアクセスであるように偽装する
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+                    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+                    'Accept-Language': 'ja,en-US;q=0.7,en;q=0.3',
+                }
             }
 
             try:
